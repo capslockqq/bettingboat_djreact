@@ -25,7 +25,7 @@ SECRET_KEY = 'lnsmgnw0u*s_jh)=zbc9$3+phbdfd5*&adnrge7l3dsmchf$@_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://bettingboat.pythonanywhere.com/']
 
 
 # Application definition
