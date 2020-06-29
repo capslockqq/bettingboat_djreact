@@ -1,0 +1,24 @@
+.NavLink {
+    color: #000 !important;
+    
+    font-family: 'Segoe UI';
+}
+
+.main-nav-active {
+    padding:5px 13px 5px 13px;
+    background-color:#e2e2e2;
+}
+
+.main-nav{
+    font-size: 18px;
+    color:#1E1E1E;
+    padding:5px 13px 5px 13px;
+    font-weight:lighter;
+}
+
+.main-nav:hover{
+    background-color:#e2e2e2;
+    padding:5px 13px 5px 13px;
+    text-decoration: none;
+    color:#1E1E1E;
+}
