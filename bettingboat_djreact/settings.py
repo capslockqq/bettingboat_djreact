@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'lnsmgnw0u*s_jh)=zbc9$3+phbdfd5*&adnrge7l3dsmchf$@_'
+SECRET_KEY = os.environ.get('BB_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://bettingboat.pythonanywhere.com/','bettingboat.pythonanywhere.com', 'www.bettingboat.pythonanywhere.com', 'https://www.bettingboat.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', 'http://bettingboat.pythonanywhere.com/','bettingboat.pythonanywhere.com', 'www.bettingboat.pythonanywhere.com', 'https://www.bettingboat.pythonanywhere.com']
 
 
 # Application definition
@@ -123,3 +123,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend/build/static')
 ]
+
+django_heroku.settings(locals())

@@ -1,0 +1,1 @@
+web: gunicorn bettingboat_djreact.wsgi.py
